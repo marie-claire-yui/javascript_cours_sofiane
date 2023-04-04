@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card"><h2>card 1</h2><button>Get more info</button></div>
+    <div class="card"><h2>card 2</h2><button>Get more info</button></div>
+    <div class="card"><h2>card 3</h2><button>Get more info</button></div>
+    <div class="card"><h2>card 4</h2><button>Get more info</button></div>
+    <div class="card"><h2>card 5</h2><button>Get more info</button></div>
+    <div class="card"><h2>card 6</h2><button>Get more info</button></div>
+    <div class="card"><h2>card 7</h2><button>Get more info</button></div>
+    <div class="card"><h2>card 8</h2><button>Get more info</button></div>
+</body>
+
+<script>
+ let card = document.querySelectorAll(".card")
+let bouton = document.querySelectorAll("button");
+let ancre =[];
+//let monDom = [];
+
+for (let index = 0; index < card.length; index++) {
+    card[index].style.backgroundColor = "red";
+ //monDom[index] = document.createElement("h2");
+  //  monDom[index].innerHTML = "mon texte";
+ //   card[index].append(monDom[index]);
+  bouton[index].setAttribute("class","popupvoyage") ;
+ bouton[index].setAttribute("id",index);
+     ancre[index] = document.createElement("a");
+     ancre[index].setAttribute("href","#up");
+     card[index].append(ancre[index]);
+    ancre[index].append(bouton[index]);
+}
+
+    console.log(ancre);
+</script>
+</html>
